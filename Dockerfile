@@ -43,4 +43,4 @@ RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-${WORDPRESS_VER
         && rm wordpress.tar.gz \
         && chown -R www-data:www-data /usr/src/wordpress
 
-ADD root /
+#ADD root /
