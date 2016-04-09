@@ -1,4 +1,4 @@
-FROM php:7.0.5-fpm-alpine
+FROM evild/alpine-php
 
 # install the PHP extensions we need
 RUN apk add --no-cache --virtual .build-deps \
@@ -43,4 +43,4 @@ RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-${WORDPRESS_VER
         && rm wordpress.tar.gz \
         && chown -R www-data:www-data /usr/src/wordpress
 
-#ADD root /
+ADD root /
