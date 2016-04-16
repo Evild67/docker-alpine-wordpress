@@ -19,7 +19,7 @@ WordPress is a free and open source blogging tool and a content management syste
 ## Installation
 Automated builds of the image are available on Dockerhub and is the recommended method of installation.
 ```
-docker pull evild/alpine-wordpress:4.4.5
+docker pull evild/alpine-wordpress:4.5.0
 ```
 You can also pull the latest tag which is built from the repository HEAD
 ```
