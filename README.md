@@ -21,7 +21,7 @@ WordPress is a free and open source blogging tool and a content management syste
 Please refer the docker run command options for the --env-file flag where you can specify all required environment variables in a single file. This will save you from writing a potentially long docker run command. Alternatively you can use docker-compose.
 
 Below is the complete list of available options that can be used to customize your WordPress installation.
-* **WP_DEBUG**: Set this to true to enable debugging.
+* **WORDPRESS_DEBUG**: Set this to true to enable debugging.
 * **WORDPRESS_DB_HOST**: The hostname of the database server.
 * **WORDPRESS_DB_USER**: The database database user. Defaults to `root`
 * **WORDPRESS_DB_PASSWORD**: The database database password.
