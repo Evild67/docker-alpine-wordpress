@@ -9,12 +9,8 @@ set -e
 		exec s6-svscanctl -t /var/run/s6/services
 	fi
 
-	if [ -z "$WORDPRESS_DB_USER" ]; then
-		WORDPRESS_DB_USER=root
-	fi
-	if [ -z "$WORDPRESS_DB_USER" ]; then
-		WORDPRESS_DB_NAME=wordpress
-	fi
+	WORDPRESS_DB_USER=${WORDPRESS_DB_USER:-root}
+	WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME:-wordpress}
 
 	if [ -z "$WORDPRESS_DB_PASSWORD" ]; then
 		echo >&2 'error: missing required WORDPRESS_DB_PASSWORD environment variable'
@@ -24,6 +20,7 @@ set -e
 		exec s6-svscanctl -t /var/run/s6/services
 	fi
 
+
 	if ! [ -e index.php -a -e wp-includes/version.php ]; then
 		echo >&2 "WordPress not found in $(pwd) - copying now..."
 		if [ "$(ls -A)" ]; then
@@ -32,8 +29,7 @@ set -e
 		fi
 		tar cf - -C /usr/src/wordpress . | tar xf -
 		echo >&2 "Complete! WordPress has been successfully copied to $(pwd)"
-	fi
-
+	
 
 
 	if [ ! -e wp-config.php ]; then
@@ -59,10 +55,12 @@ EOPHP
 	for unique in AUTH_KEY SECURE_AUTH_KEY LOGGED_IN_KEY NONCE_KEY AUTH_SALT SECURE_AUTH_SALT LOGGED_IN_SALT NONCE_SALT; do
 		eval unique_value=\$WORDPRESS_$unique
 		if [ "$unique_value" ]; then
-			  sed -i "/$unique/s/'[^']*'/'$unique_value'/2" wp-config.php
-
+			  sed -i "/define('$unique/s/'[^']*'/'$unique_value'/2" wp-config.php
 		else
-				sed -i "/$unique/s/'[^']*'/'$(head -c 1m /dev/urandom | sha1sum | cut -d' ' -f1)'/2" wp-config.php
+			current_set=$(sed -rn "s/define\('$unique',[^']*'([^']*).*/\\1/p" wp-config.php)
+			if [ "$current_set" = 'put your unique phrase here' ]; then
+				sed -i "/define('$unique/s/'[^']*'/'$(head -c 1m /dev/urandom | sha1sum | cut -d' ' -f1)'/2" wp-config.php
+			fi
 		fi
 	done
 
@@ -104,3 +102,4 @@ if (!$mysql->query('CREATE DATABASE IF NOT EXISTS `' . $mysql->real_escape_strin
 
 $mysql->close();
 EOPHP
+fi
