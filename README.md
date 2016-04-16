@@ -9,7 +9,7 @@ This image is based on [evild/alpine-php](https://hub.docker.com/r/evild/alpine-
 ## Version
 
 - `latest` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/master/Dockerfile)
-- `4.5` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/master/Dockerfile)
+- `4.5` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/1aaa88f60079302c7a98b12241b8f135e3ad85f3/Dockerfile)
 
 
 ## What is WordPress?
