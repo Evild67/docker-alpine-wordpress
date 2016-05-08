@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+docker --version
+
+
+
+docker build -t evild/alpine-wordpress:latest .
+docker inspect evild/alpine-nodejs:latest
