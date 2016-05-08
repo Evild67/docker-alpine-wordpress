@@ -1,7 +1,7 @@
 FROM evild/alpine-php:latest
 
-ARG WORDPRESS_VERSION=4.4.2
-ARG WORDPRESS_SHA1=7444099fec298b599eb026e83227462bcdf312a6
+ARG WORDPRESS_VERSION=4.5.2
+ARG WORDPRESS_SHA1=bab94003a5d2285f6ae76407e7b1bbb75382c36e
 
 RUN apk add --no-cache --virtual .build-deps \
                 autoconf gcc libc-dev make \

@@ -9,7 +9,7 @@ This image is based on [evild/alpine-php](https://hub.docker.com/r/evild/alpine-
 ## Version
 
 - `latest` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/master/Dockerfile)
-- `4.5` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/1aaa88f60079302c7a98b12241b8f135e3ad85f3/Dockerfile)
+- `4.5.2` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/3ca44832bc8d1f30222665b1a00806461b10b851/Dockerfile)
 
 
 ## What is WordPress?
@@ -34,7 +34,7 @@ docker build -t evild/alpine-wordpress github.com/evild67/alpine-wordpress
 
 You can manually launch the Wordpress container and the supporting Nginx and Database containers.
 
-MariaDB : 
+MariaDB :
 ```
 docker run -t mariadb -e MYSQL_ROOT_PASSWORD=password --link mariadb mariadb:latest
 ```
@@ -63,4 +63,3 @@ Below is the complete list of available options that can be used to customize yo
 * **WORDPRESS_SECURE_AUTH_SALT**: Defaults to unique random SHA1s
 * **WORDPRESS_WORDPRESS_LOGGED_IN_SALT**: Defaults to unique random SHA1s
 * **WORDPRESS_NONCE_SALT**: Defaults to unique random SHA1s
-
