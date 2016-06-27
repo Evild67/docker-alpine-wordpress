@@ -9,6 +9,7 @@ This image is based on [evild/alpine-php](https://hub.docker.com/r/evild/alpine-
 ## Version
 
 - `latest` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/master/Dockerfile)
+- `4.5.3` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/a1ddef9ad8000d328671ed366e1c7c34246fdbdd/Dockerfile)
 - `4.5.2` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/3ca44832bc8d1f30222665b1a00806461b10b851/Dockerfile)
 
 
@@ -19,7 +20,7 @@ WordPress is a free and open source blogging tool and a content management syste
 ## Installation
 Automated builds of the image are available on Dockerhub and is the recommended method of installation.
 ```
-docker pull evild/alpine-wordpress:4.5.2
+docker pull evild/alpine-wordpress:4.5.3
 ```
 You can also pull the latest tag which is built from the repository HEAD
 ```
