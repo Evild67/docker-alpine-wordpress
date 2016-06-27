@@ -1,4 +1,4 @@
-FROM evild/alpine-php:latest
+FROM evild/alpine-php:7.0.8
 
 ARG WORDPRESS_VERSION=4.5.2
 ARG WORDPRESS_SHA1=bab94003a5d2285f6ae76407e7b1bbb75382c36e
