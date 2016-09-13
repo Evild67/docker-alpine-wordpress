@@ -1,6 +1,6 @@
 [![Docker Stars](https://img.shields.io/docker/stars/evild/alpine-wordpress.svg?style=flat-square)](https://hub.docker.com/r/evild/alpine-wordpress/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/evild/alpine-wordpress.svg?style=flat-square)](https://hub.docker.com/r/evild/alpine-wordpress/)
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/evild/alpine-wordpress/latest.svg?style=flat-square)](https://hub.docker.com/r/evild/alpine-wordpress/)
+[![](https://images.microbadger.com/badges/image/evild/alpine-wordpress.svg)](https://microbadger.com/images/evild/alpine-wordpress)
 
 # Alpine Wordpress
 
