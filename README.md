@@ -9,6 +9,7 @@ This image is based on [evild/alpine-php](https://hub.docker.com/r/evild/alpine-
 ## Version
 
 - `latest` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/master/Dockerfile)
+- `4.5.4` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/43300ea22cdac08ecf738ee2619e81709adb9c51/Dockerfile)
 - `4.5.3` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/a1ddef9ad8000d328671ed366e1c7c34246fdbdd/Dockerfile)
 - `4.5.2` [(Dockerfile)](https://github.com/Evild67/docker-alpine-wordpress/blob/3ca44832bc8d1f30222665b1a00806461b10b851/Dockerfile)
 
